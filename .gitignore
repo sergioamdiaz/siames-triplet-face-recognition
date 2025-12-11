@@ -1,0 +1,7 @@
+# Git ignore rules
+
+# Data Folder
+Data/
+
+# Docs Folder
+Docs/
