@@ -1,0 +1,42 @@
+# Siamese Triplet Network for Face Recognition (LFW Dataset)
+
+This project implements a **Siamese CNN trained with Triplet Loss** to perform face recognition using the **Labeled Faces in the Wild (LFW)** dataset.  
+The model learns an embedding space where images of the same person lie close together, and images of different people lie farther apart.
+
+---
+
+## 🚀 Project Overview
+
+### Goal
+Learn discriminative facial embeddings for identity verification using a deep metric learning approach.
+
+### Highlights
+- Triplet Loss implementation (Anchor–Positive–Negative).
+- Custom TensorFlow/Keras data pipeline for triplet generation.
+- Embedding visualization with PCA / t-SNE.
+- Evaluation with threshold-based accuracy.
+- Ready-to-use inference script for face comparison.
+
+---
+
+## 🧠 Architecture
+
+- Base CNN: Custom convolutional encoder trained from scratch.  
+- Embedding size: **128-D** or **256-D** (configurable).  
+- Loss: **Triplet Loss (margin = 0.2)**.  
+- Optimizer: Adam.  
+
+---
+
+## 📂 Project Structure
+project/
+│── data/
+│ └── lfw/ # (Not included — download link below)
+│── src/
+│ ├── dataset.py # Triplet generator
+│ ├── model.py # Siamese encoder + triplet model
+│ ├── train.py # Training loop
+│ └── inference.py # Compare embeddings between two faces
+│── notebooks/
+│── results/
+│── README.md
